@@ -12,7 +12,7 @@ service = discovery.build('storage', 'v1', credentials=credentials)
 
 # Change this filepath to fit new week 
 filepath = r"filepath"
-bucket = 'tgtvs'
+bucket = 'buckett name'
 
 # Create buckkett subdir
 Week = "Subdir"
