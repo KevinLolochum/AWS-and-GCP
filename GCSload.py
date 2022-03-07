@@ -15,7 +15,7 @@ filepath = r"filepath"
 bucket = 'buckett name'
 
 # Create buckkett subdir
-Week = "Subdir"
+sub = "Subdir"
 
 
 def Load(Files):
@@ -23,7 +23,7 @@ def Load(Files):
     Files = glob.glob(filepath + "/*.csv")
     for file in Files:
         # Add subdictory by combining filename with subdir name
-        body = {'name': Week+str(file).split("\\")[-1]}
+        body = {'name': sub+str(file).split("\\")[-1]}
         req = service.objects().insert(bucket=bucket, body=body, media_body=file)
         resp = req.execute()
 
