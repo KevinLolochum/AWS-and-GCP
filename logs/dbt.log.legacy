@@ -67,3 +67,78 @@
 2022-06-26 17:22:52.972050 (Thread-15): handling status request
 2022-06-26 17:22:52.973577 (Thread-15): 17:22:52  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '15078e14-f3fe-4602-9ba7-7334114f8735', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fad6058a850>]}
 2022-06-26 17:22:52.974426 (Thread-15): sending response (<Response 15785 bytes [200 OK]>) to 10.0.18.132
+2022-06-26 23:47:25.207499 (MainThread): Running with dbt=1.0.8
+2022-06-26 23:47:25.464261 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt_rpc.task.server.RPCServerTask'>, debug=None, defer=None, exclude=None, fail_fast=None, host='0.0.0.0', log_cache_events=False, log_format=None, models=None, partial_parse=True, port=8580, printer_width=None, profile='user', profiles_dir='/usr/src/develop/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='rpc', write_json=None)
+2022-06-26 23:47:25.473056 (MainThread): Tracking: tracking
+2022-06-26 23:47:25.473368 (MainThread): 23:47:25  Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f48ead39850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f48a6fe7730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f48a6ff4af0>]}
+2022-06-26 23:47:25.473720 (MainThread): Serving RPC server at 0.0.0.0:8580, pid=22
+2022-06-26 23:47:25.474033 (MainThread): Supported methods: ['build', 'cli_args', 'compile', 'compile_sql', 'deps', 'docs.generate', 'gc', 'get-manifest', 'kill', 'list', 'poll', 'ps', 'run', 'run-operation', 'run_sql', 'seed', 'snapshot', 'snapshot-freshness', 'source-freshness', 'status', 'test']
+2022-06-26 23:47:25.479372 (MainThread): Send requests to http://localhost:8580/jsonrpc
+2022-06-26 23:47:25.489455 (Thread-12): 23:47:25  Unable to do partial parsing because profile has changed
+2022-06-26 23:47:25.489750 (Thread-12): 23:47:25  Unable to do partial parsing because a project dependency has been added
+2022-06-26 23:47:25.489957 (Thread-12): 23:47:25  Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'c0425347-b253-49a6-a4f7-e0629917fa6b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f48a6ffeb50>]}
+2022-06-26 23:47:25.521024 (Thread-12): 23:47:25  Parsing macros/adapters.sql
+2022-06-26 23:47:25.558870 (Thread-12): 23:47:25  Parsing macros/catalog.sql
+2022-06-26 23:47:25.560921 (Thread-12): 23:47:25  Parsing macros/materializations/table.sql
+2022-06-26 23:47:25.563942 (Thread-12): 23:47:25  Parsing macros/materializations/seed.sql
+2022-06-26 23:47:25.568991 (Thread-12): 23:47:25  Parsing macros/materializations/incremental.sql
+2022-06-26 23:47:25.577250 (Thread-12): 23:47:25  Parsing macros/materializations/merge.sql
+2022-06-26 23:47:25.580955 (Thread-12): 23:47:25  Parsing macros/materializations/snapshot.sql
+2022-06-26 23:47:25.581943 (Thread-12): 23:47:25  Parsing macros/materializations/view.sql
+2022-06-26 23:47:25.583269 (Thread-12): 23:47:25  Parsing macros/adapters/metadata.sql
+2022-06-26 23:47:25.590152 (Thread-12): 23:47:25  Parsing macros/adapters/columns.sql
+2022-06-26 23:47:25.599667 (Thread-12): 23:47:25  Parsing macros/adapters/freshness.sql
+2022-06-26 23:47:25.602480 (Thread-12): 23:47:25  Parsing macros/adapters/persist_docs.sql
+2022-06-26 23:47:25.606729 (Thread-12): 23:47:25  Parsing macros/adapters/relation.sql
+2022-06-26 23:47:25.615930 (Thread-12): 23:47:25  Parsing macros/adapters/schema.sql
+2022-06-26 23:47:25.618050 (Thread-12): 23:47:25  Parsing macros/adapters/indexes.sql
+2022-06-26 23:47:25.620665 (Thread-12): 23:47:25  Parsing macros/get_custom_name/get_custom_schema.sql
+2022-06-26 23:47:25.623066 (Thread-12): 23:47:25  Parsing macros/get_custom_name/get_custom_alias.sql
+2022-06-26 23:47:25.624656 (Thread-12): 23:47:25  Parsing macros/get_custom_name/get_custom_database.sql
+2022-06-26 23:47:25.626223 (Thread-12): 23:47:25  Parsing macros/etc/datetime.sql
+2022-06-26 23:47:25.634327 (Thread-12): 23:47:25  Parsing macros/etc/statement.sql
+2022-06-26 23:47:25.638620 (Thread-12): 23:47:25  Parsing macros/generic_test_sql/unique.sql
+2022-06-26 23:47:25.639333 (Thread-12): 23:47:25  Parsing macros/generic_test_sql/not_null.sql
+2022-06-26 23:47:25.639908 (Thread-12): 23:47:25  Parsing macros/generic_test_sql/accepted_values.sql
+2022-06-26 23:47:25.641248 (Thread-12): 23:47:25  Parsing macros/generic_test_sql/relationships.sql
+2022-06-26 23:47:25.642139 (Thread-12): 23:47:25  Parsing macros/materializations/configs.sql
+2022-06-26 23:47:25.644394 (Thread-12): 23:47:25  Parsing macros/materializations/hooks.sql
+2022-06-26 23:47:25.648141 (Thread-12): 23:47:25  Parsing macros/materializations/models/table/table.sql
+2022-06-26 23:47:25.655350 (Thread-12): 23:47:25  Parsing macros/materializations/models/table/create_table_as.sql
+2022-06-26 23:47:25.658143 (Thread-12): 23:47:25  Parsing macros/materializations/models/view/create_or_replace_view.sql
+2022-06-26 23:47:25.660742 (Thread-12): 23:47:25  Parsing macros/materializations/models/view/helpers.sql
+2022-06-26 23:47:25.662048 (Thread-12): 23:47:25  Parsing macros/materializations/models/view/create_view_as.sql
+2022-06-26 23:47:25.664295 (Thread-12): 23:47:25  Parsing macros/materializations/models/view/view.sql
+2022-06-26 23:47:25.671189 (Thread-12): 23:47:25  Parsing macros/materializations/models/incremental/incremental.sql
+2022-06-26 23:47:25.680881 (Thread-12): 23:47:25  Parsing macros/materializations/models/incremental/on_schema_change.sql
+2022-06-26 23:47:25.695820 (Thread-12): 23:47:25  Parsing macros/materializations/models/incremental/is_incremental.sql
+2022-06-26 23:47:25.697279 (Thread-12): 23:47:25  Parsing macros/materializations/models/incremental/merge.sql
+2022-06-26 23:47:25.708049 (Thread-12): 23:47:25  Parsing macros/materializations/models/incremental/column_helpers.sql
+2022-06-26 23:47:25.712334 (Thread-12): 23:47:25  Parsing macros/materializations/seeds/helpers.sql
+2022-06-26 23:47:25.728020 (Thread-12): 23:47:25  Parsing macros/materializations/seeds/seed.sql
+2022-06-26 23:47:25.733795 (Thread-12): 23:47:25  Parsing macros/materializations/tests/helpers.sql
+2022-06-26 23:47:25.735495 (Thread-12): 23:47:25  Parsing macros/materializations/tests/test.sql
+2022-06-26 23:47:25.739804 (Thread-12): 23:47:25  Parsing macros/materializations/tests/where_subquery.sql
+2022-06-26 23:47:25.741613 (Thread-12): 23:47:25  Parsing macros/materializations/snapshots/helpers.sql
+2022-06-26 23:47:25.752493 (Thread-12): 23:47:25  Parsing macros/materializations/snapshots/strategies.sql
+2022-06-26 23:47:25.768765 (Thread-12): 23:47:25  Parsing macros/materializations/snapshots/snapshot_merge.sql
+2022-06-26 23:47:25.770368 (Thread-12): 23:47:25  Parsing macros/materializations/snapshots/snapshot.sql
+2022-06-26 23:47:25.781606 (Thread-12): 23:47:25  Parsing tests/generic/builtin.sql
+2022-06-26 23:47:25.972988 (Thread-12): 23:47:25  1699: static parser successfully parsed example/my_second_dbt_model.sql
+2022-06-26 23:47:25.984747 (Thread-12): 23:47:25  1699: static parser successfully parsed example/my_first_dbt_model.sql
+2022-06-26 23:47:26.070790 (Thread-12): 23:47:26  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c0425347-b253-49a6-a4f7-e0629917fa6b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f48a6fb9250>]}
+2022-06-26 23:47:29.059196 (Thread-13): handling status request
+2022-06-26 23:47:29.059685 (Thread-13): 23:47:29  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c0425347-b253-49a6-a4f7-e0629917fa6b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f48a6ffe670>]}
+2022-06-26 23:47:29.060773 (Thread-13): sending response (<Response 15878 bytes [200 OK]>) to 10.0.5.232
+2022-06-26 23:47:29.070253 (Thread-14): handling ps request
+2022-06-26 23:47:29.070566 (Thread-14): 23:47:29  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c0425347-b253-49a6-a4f7-e0629917fa6b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f48a40cc1c0>]}
+2022-06-26 23:47:29.070949 (Thread-14): sending response (<Response 105 bytes [200 OK]>) to 10.0.5.232
+2022-06-26 23:47:29.291176 (Thread-15): handling status request
+2022-06-26 23:47:29.291580 (Thread-15): 23:47:29  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c0425347-b253-49a6-a4f7-e0629917fa6b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f48a40dbfa0>]}
+2022-06-26 23:47:29.292485 (Thread-15): sending response (<Response 15878 bytes [200 OK]>) to 10.0.5.232
+2022-06-26 23:47:29.339257 (Thread-16): handling status request
+2022-06-26 23:47:29.339535 (Thread-16): 23:47:29  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c0425347-b253-49a6-a4f7-e0629917fa6b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f48a40db520>]}
+2022-06-26 23:47:29.340250 (Thread-16): sending response (<Response 15878 bytes [200 OK]>) to 10.0.5.232
+2022-06-26 23:47:31.642395 (Thread-17): handling status request
+2022-06-26 23:47:31.642832 (Thread-17): 23:47:31  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c0425347-b253-49a6-a4f7-e0629917fa6b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f48a6ffea00>]}
+2022-06-26 23:47:31.643689 (Thread-17): sending response (<Response 15878 bytes [200 OK]>) to 10.0.5.232
